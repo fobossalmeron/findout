@@ -33,14 +33,14 @@ header {
     padding: 15px 4% 8px 11%;
     nav {
         ul {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
             width: 100%;
-            min-width: 300px;
+            min-width: 380px;
             li {
                 list-style: none;
+                padding-right: 15px;
                 list-style-type: none;
-                a.active{
+                a.active {
                     font-weight: 600;
                 }
             }
@@ -52,9 +52,8 @@ header {
     .designSuccessLogo,
     .designSuccessLogoMobile,
     .websiteLogo {
-        width: 120px;
+        width: 95px;
         * {
-            fill: white;
             &.yellow,
             &.yellow * {
                 fill: $brand-main-color;
@@ -70,7 +69,9 @@ header {
         max-width: 35px;
         cursor: pointer;
         transition: .3s ease all;
-        #top, #mid, #bot{
+        #top,
+        #mid,
+        #bot {
             transition: .3s ease all;
         }
         &.active {
@@ -129,7 +130,6 @@ section {
     width: 100%;
     max-width: 1150px;
     margin: 0 auto;
-    min-height: 100vh;
     padding: 3%;
     box-sizing: border-box;
 }
@@ -280,10 +280,17 @@ svg {
             color: gray;
             justify-content: space-between;
             margin: 0;
+            li {
+                font-size: 1.3rem;
+                &:before {
+                    display: none;
+                }
+            }
         }
         p {
             grid-area: 2 /span 1;
             margin-left: 0;
+            font-size: 1.4rem;
             &:nth-child(2) {
                 grid-row-end: span 1;
             }
@@ -295,10 +302,30 @@ svg {
     }
     .engageLogo {
         grid-area: logo;
-        max-width: 450px;
+        max-width: 260px;
         * {
             fill: $brand-main-color;
         }
+    }
+    #downloadPager{
+        position: absolute;
+        background-color: $brand-main-color;
+        border: none;
+        padding: 1%;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: white;
+        font-family: inherit;
+        border-radius: 2px;
+        grid-row: 3 / span 1;
+        justify-self: flex-end;
+        align-self: flex-end;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 600;
+    }
+    svg {
+        max-width: 100%;
     }
     h2 {
         grid-area: h2;
@@ -319,7 +346,7 @@ svg {
             grid-template-areas: "name company" "email phone" "challenge challenge";
             font-family: inherit;
             min-height: 210px;
-            p{
+            p {
                 font-size: 3rem;
                 padding: 3%;
                 text-align: center;
@@ -370,11 +397,11 @@ svg {
             width: 90px;
             padding: 5px;
             margin-top: 10%;
-            cursor:pointer;
+            cursor: pointer;
             transition: .3s ease all;
-            &:hover{
+            &:hover {
                 border-color: white;
-                color:white;
+                color: white;
             }
         }
     }
@@ -385,6 +412,7 @@ svg {
         grid-row-end: last-line;
         z-index: -1;
         margin-left: 5%;
+        align-self: flex-start;
         .landmark {
             animation: repulse infinite ease-out 1s;
             transform-origin: 50% 50%;
@@ -413,6 +441,7 @@ svg {
         }
         p {
             padding: 0px 8%;
+            font-size: 1.4rem;
         }
         .socialList {
             width: 150px;

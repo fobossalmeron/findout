@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ContactForm from "./../ContactForm";
-import DigitalSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/digitalSuccess.svg";
+import FindOutIcon from "svg-react-loader?name=FindOutIcon!../../../assets/img/layout/findOut.svg";
+import ChallengesWelcome from "svg-react-loader?name=ChallengesWelcome!../../../assets/img/layout/challengesWelcome.svg";
 import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap.svg";
 import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../../assets/img/social/instagram.svg";
 import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../../assets/img/social/facebook.svg";
@@ -13,8 +14,11 @@ class ContactSection extends Component {
   render() {
     return (
       <section id="contact">
-        <DigitalSuccess className="engageLogo" />
-        <h2>challenges welcome</h2>
+        <FindOutIcon className="engageLogo" />
+        <h2>
+          <ChallengesWelcome />
+        </h2>
+        <a id="downloadPager" href="assets/pdf/one-pager.pdf" download>download PDF<br/>find:out one pager</a>
         <div className="locationContact">
           <ul className="chooseList">
             <li>las vegas</li>
@@ -24,10 +28,10 @@ class ContactSection extends Component {
           </ul>
         </div>
         <div className="locationContact">
-          <p>universal number: +1-702 802 0200</p>
+          <p>1-844-2 FIND OUT (1-844-234-6368)</p>
           <p>
             <a href="mailto:success@designsuccess.com">
-              success@designsuccess.com
+              info@findoutresearch.com
             </a>
           </p>
         </div>

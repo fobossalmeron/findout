@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
-import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/digitalSuccess.svg";
+import HeroDesktop from "svg-react-loader?name=HeroDesktop!../../../assets/img/layout/heroDesktop.svg";
+
 
 class HomeSection extends Component {
   constructor(props) {
@@ -18,16 +19,13 @@ class HomeSection extends Component {
     return (
       <section id="home">
         <div className="overVideo">
-          <h1>reinventing market research</h1>
-          <h2>
-          finding solutions where others can’t
-          </h2>
+          <h1><HeroDesktop/></h1>
         </div>
         <div id="homevideo">
           <div className="video_overlay" />
           <ReactPlayer
-            url="./assets/video/intro.mp4"
-            playing={this.state.playing}
+            url="assets/video/intro.mp4"
+            playing={true}
             loop={true}
             muted={true}
             playsinline={true}

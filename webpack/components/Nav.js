@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Modal from "react-modal";
 import HamburgerIcon from "svg-react-loader?name=HamburgerIcon!../../assets/img/layout/hamburger.svg";
 import DesignSuccess from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/designSuccess.svg";
 import DesignSuccessMobile from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/designSuccessMobile.svg";
-import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/digitalSuccess.svg";
+import FindOut from "svg-react-loader?name=FindOut!../../assets/img/layout/findOut.svg";
 
 class Nav extends Component {
   constructor(props) {
@@ -57,33 +56,53 @@ class Nav extends Component {
     }
   }
 
-  doScrollToAbout(event) {
+  doScrollToWho(event) {
     this.props.closeModal();
-    if (typeof this.props.scrollToAbout !== "undefined") {
+    if (typeof this.props.scrollToWho !== "undefined") {
       event.preventDefault();
-      this.props.scrollToAbout();
+      this.props.scrollToWho();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#what&how");
+        history.pushState("", document.title, "#who");
       }
     }
   }
-  doScrollToWork() {
+  doScrollToRecruitment() {
     this.props.closeModal();
-    if (typeof this.props.scrollToWork !== "undefined") {
+    if (typeof this.props.scrollToRecruitment !== "undefined") {
       event.preventDefault();
-      this.props.scrollToWork();
+      this.props.scrollToRecruitment();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#work");
+        history.pushState("", document.title, "#recruitment");
       }
     }
   }
-  doScrollToServices() {
+  doScrollToMethodologies() {
     this.props.closeModal();
-    if (typeof this.props.scrollToServices !== "undefined") {
+    if (typeof this.props.scrollToMethodologies !== "undefined") {
       event.preventDefault();
-      this.props.scrollToServices();
+      this.props.scrollToMethodologies();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#serviceareas");
+        history.pushState("", document.title, "#methodologies");
+      }
+    }
+  }
+  doScrollToInnovation() {
+    this.props.closeModal();
+    if (typeof this.props.scrollToInnovation !== "undefined") {
+      event.preventDefault();
+      this.props.scrollToInnovation();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#innovation");
+      }
+    }
+  }
+  doScrollToWhy() {
+    this.props.closeModal();
+    if (typeof this.props.scrollToWhy !== "undefined") {
+      event.preventDefault();
+      this.props.scrollToWhy();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#why");
       }
     }
   }
@@ -119,11 +138,6 @@ class Nav extends Component {
     return (
       <header>
         <div className="headerWrapper">
-          <a className="hideText" href="http://designsuccess.com">
-            <DesignSuccess className="designSuccessLogo" />
-            <DesignSuccessMobile className="designSuccessLogoMobile" />
-            design:success
-          </a>
           <a
             onClick={() => {
               this.doHideNav();
@@ -132,8 +146,7 @@ class Nav extends Component {
             href={baseUrl + "#home"}
             className="hideText a"
           >
-            <DigitalSuccess className="websiteLogo" id="websiteLogo" />
-            digital:success
+            <FindOut className="websiteLogo" id="websiteLogo" />
           </a>
           <HamburgerIcon
             id="hamburger"
@@ -145,26 +158,42 @@ class Nav extends Component {
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToAbout(event);
+                  this.doScrollToWho(event);
                 }}
               >
-                <a href={baseUrl + "#what&how"}>what & how</a>
+                <a href={baseUrl + "#who"}>who</a>
               </li>
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToWork(event);
+                  this.doScrollToRecruitment(event);
                 }}
               >
-                <a href={baseUrl + "#work"}>work</a>
+                <a href={baseUrl + "#recruitment"}>recruitment</a>
               </li>
               <li
                 onClick={() => {
                   this.doHideNav();
-                  this.doScrollToServices();
+                  this.doScrollToMethodologies();
                 }}
               >
-                <a href={baseUrl + "#serviceareas"}>service areas</a>
+                <a href={baseUrl + "#methodologies"}>methodologies</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToInnovation();
+                }}
+              >
+                <a href={baseUrl + "#innovation"}>innovation</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToWhy();
+                }}
+              >
+                <a href={baseUrl + "#why"}>why</a>
               </li>
               <li
                 onClick={() => {

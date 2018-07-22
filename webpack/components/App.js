@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
 import HomeSection from "./presentational/HomeSection";
-import WorkSection from "./presentational/WorkSection";
-import AboutSection from "./presentational/AboutSection";
-import ServicesSection from "./presentational/ServicesSection";
+import WhoSection from "./presentational/WhoSection";
+import InnovationSection from "./presentational/InnovationSection";
+import RecruitmentSection from "./presentational/RecruitmentSection";
+import MethodologiesSection from "./presentational/MethodologiesSection";
+import WhySection from "./presentational/WhySection";
 import ContactSection from "./presentational/ContactSection";
 import scrollToComponent from "react-scroll-to-component";
-import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../assets/img/social/instagram.svg";
-import UnderConstructionIcon from "svg-react-loader?name=UnderConstruction!../../assets/img/underconstruction.svg";
 
 class App extends Component {
   constructor(props) {
@@ -63,36 +63,9 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        <div id="loadingvideo">
-          <UnderConstructionIcon />
-        </div>
-        <div className="aboveVideo">
-          <img src="assets/img/layout/logo.svg" />
-          <img src="assets/img/layout/type.svg" />
-          <div className="secondLanding">
-            <h2 className="blue">we're</h2>
-            <h2 className="yellow">redesigning</h2>
-            <h2 className="pink">ourselves</h2>
-          </div>
-          <div className="follow">
-            <p>
-              follow us on
-              <a
-                href={"https://www.instagram.com/more.than.spaces/"}
-                target="_blank"
-              >
-                <InstagramIcon />
-              </a>
-            </p>
-            <p>
-              <a href="http://instagram.com/more.than.spaces/">
-                @<span className="blue">more</span>.<span className="yellow">
-                  than
-                </span>.<span className="pink">spaces</span>
-              </a>
-            </p>
-          </div>
-        </div>
+        <h2 className="blue">we're</h2>
+        <h2 className="yellow">redesigning</h2>
+        <h2 className="pink">ourselves</h2>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     );
@@ -106,14 +79,20 @@ class App extends Component {
           scrollToHome={() =>
             scrollToComponent(this.Home, { offset: 0, align: "top" })
           }
-          scrollToAbout={() =>
-            scrollToComponent(this.About, { offset: -45, align: "top" })
+          scrollToWho={() =>
+            scrollToComponent(this.Who, { offset: 0, align: "top" })
           }
-          scrollToServices={() =>
-            scrollToComponent(this.Services, { offset: -45, align: "top" })
+          scrollToRecruitment={() =>
+            scrollToComponent(this.Recruitment, { offset: -45, align: "top" })
           }
-          scrollToWork={() =>
-            scrollToComponent(this.Work, { offset: -45, align: "top" })
+          scrollToMethodologies={() =>
+            scrollToComponent(this.Methodologies, { offset: -45, align: "top" })
+          }
+          scrollToInnovation={() =>
+            scrollToComponent(this.Innovation, { offset: -45, align: "top" })
+          }
+          scrollToWhy={() =>
+            scrollToComponent(this.Why, { offset: -45, align: "top" })
           }
           scrollToContact={() =>
             scrollToComponent(this.Contact, { offset: -45, align: "top" })
@@ -124,22 +103,32 @@ class App extends Component {
             this.Home = section;
           }}
         />
-        <AboutSection
+        <WhoSection
           ref={section => {
-            this.About = section;
+            this.Who = section;
           }}
         />
-        <WorkSection
+        <RecruitmentSection
           ref={section => {
-            this.Work = section;
+            this.Recruitment = section;
+          }}
+        />
+        <MethodologiesSection
+          ref={section => {
+            this.Methodologies = section;
+          }}
+        />
+        <InnovationSection
+          ref={section => {
+            this.Innovation = section;
           }}
           modalOpen={this.state.modalOpen}
           openModal={this.openModal.bind(this)}
           closeModal={this.closeModal.bind(this)}
         />
-        <ServicesSection
+        <WhySection
           ref={section => {
-            this.Services = section;
+            this.Why = section;
           }}
         />
         <ContactSection
