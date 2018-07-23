@@ -25,10 +25,10 @@ class HomeSection extends Component {
           <div className="video_overlay" />
           <ReactPlayer
             url="assets/video/intro.mp4"
-            playing={true}
-            loop={true}
-            muted={true}
-            playsinline={true}
+            playing
+            loop
+            muted
+            playsinline
           />
         </div>
       </section>

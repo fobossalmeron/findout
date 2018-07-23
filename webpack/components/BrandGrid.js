@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AreasModal from "./areasModal";
+import BrandModal from "./brandModal";
 import CocaColaIcon from "svg-react-loader?name=CocaColaIcon!./../../assets/img/clients/clientCocaCola.svg";
 import NikeIcon from "svg-react-loader?name=NikeIcon!./../../assets/img/clients/clientNike.svg";
 import KraftIcon from "svg-react-loader?name=KraftIcon!./../../assets/img/clients/clientKraft.svg";
@@ -9,6 +9,7 @@ import FritoLayIcon from "svg-react-loader?name=FritoLayIcon!./../../assets/img/
 import UnileverIcon from "svg-react-loader?name=UnileverIcon!./../../assets/img/clients/clientUnilever.svg";
 import PepsicoIcon from "svg-react-loader?name=PepsicoIcon!./../../assets/img/clients/clientPepsico.svg";
 import KelloggsIcon from "svg-react-loader?name=KelloggsIcon!./../../assets/img/clients/clientKelloggs.svg";
+import MaryKayIcon from "svg-react-loader?name=MaryKayIcon!./../../assets/img/clients/clientMaryKay.svg";
 import LundbeckIcon from "svg-react-loader?name=LundbeckIcon!./../../assets/img/clients/clientLudbeck.svg";
 import DiageoIcon from "svg-react-loader?name=DiageoIcon!./../../assets/img/clients/clientDiageo.svg";
 
@@ -59,8 +60,44 @@ const brandsData = {
     {
       id: 7,
       title: "Unilever",
-      desc:"<b>Unilever</b> Innovation and brand development for multiple categories: Savory (Knorr), Ice teas (Lipton), Ice cream (Carte D’Or).",
+      desc:
+        "<b>Unilever</b> Innovation and brand development for multiple categories: Savory (Knorr), Ice teas (Lipton), Ice cream (Carte D’Or).",
       svg: <UnileverIcon />
+    },
+    {
+      id: 8,
+      title: "PepsiCo",
+      desc:
+        "<b>PepsiCo</b> International innovation, insight and validation for new snacking products",
+      svg: <PepsicoIcon />
+    },
+    {
+      id: 9,
+      title: "Mary Kay",
+      desc:
+        "<b>Mary Kay</b> In-depth analysis of new products and opportunities across 4 continents.",
+      svg: <MaryKayIcon />
+    },
+    {
+      id: 10,
+      title: "Kelloggs",
+      desc:
+        "<b>Kelloggs</b> In-depth insight and innovation of product platforms for kids and parents.",
+      svg: <KelloggsIcon />
+    },
+    {
+      id: 11,
+      title: "Lundbeck",
+      desc:
+        "<b>Diageo</b> Ethnographic and insight study for new beer and spirit products.",
+      svg: <LundbeckIcon />
+    },
+    {
+      id: 12,
+      title: "Diageo",
+      desc:
+        "<b>Diageo</b> Ethnographic and insight study for new beer and spirit products.",
+      svg: <DiageoIcon />
     }
   ]
 };
@@ -105,11 +142,19 @@ class BrandGrid extends Component {
   }
 
   toggleModal(selected) {
-    if (window.innerWidth < 1000) {
-      this.setState({
-        modalToggled: true,
-        selectedbrand: selected
-      });
+    this.setState({
+      modalToggled: !this.state.modalToggled,
+      selectedbrand: selected
+    });
+  }
+
+  decideRow(brand) {
+    if (brand.id <= 4) {
+      return 1;
+    } else if (brand.id > 4 && brand.id <= 8) {
+      return 2;
+    } else {
+      return 3;
     }
   }
 
@@ -123,12 +168,12 @@ class BrandGrid extends Component {
         {brand.svg}
         <div className="hidden">
           <h3 dangerouslySetInnerHTML={{ __html: brand.title }} />
-          <p dangerouslySetInnerHTML={{ __html: brand.desc }} />
+          <p>click to find out more</p>
         </div>
       </li>
     ));
     var brandModal = (
-      <AreasModal
+      <BrandModal
         brand={this.state.selectedbrand}
         brands={brandsData.brands}
         changebrand={this.toggleModal.bind(this)}
@@ -137,13 +182,21 @@ class BrandGrid extends Component {
         closeModal={this.closeModal.bind(this)}
       />
     );
-    var brandList = <ul className={"brandList "}>{list}</ul>;
-
-    var isModalToggled = this.state.modalToggled ? brandModal : null;
+    var isModalToggled = this.state.modalToggled ? `visible visible${this.decideRow(this.state.selectedbrand)}` : "";
     return (
       <div className="brandGrid">
-        {brandList}
-        {isModalToggled}
+        <ul className={"brandList " + isModalToggled}>
+          {list}
+          <BrandModal
+            className={isModalToggled}
+            brand={this.state.selectedbrand}
+            brands={brandsData.brands}
+            changebrand={this.toggleModal.bind(this)}
+            prevModal={this.prevModal.bind(this)}
+            nextModal={this.nextModal.bind(this)}
+            closeModal={this.closeModal.bind(this)}
+          />
+        </ul>
       </div>
     );
   }
