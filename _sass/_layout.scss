@@ -235,7 +235,7 @@ section {
                 text-align: center;
                 position: relative;
                 z-index: -1;
-                .close{
+                .close {
                     top: 10px;
                 }
                 &.visible {
@@ -379,6 +379,124 @@ section {
             h4 {
                 color: $brand-main-color;
                 font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+#methodologies {
+    .methodGrid {
+        position: relative;
+        .methodModal {
+            opacity: 0;
+            z-index: -1;
+            position: relative;
+            transition: 300ms 0ms ease opacity, 100ms 200ms ease z-index;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            padding: 0 4%;
+            height: 730px;
+            .special{
+                ul:nth-of-type(1){
+                    display: flex;
+                    flex-direction: column;              
+                    li{
+                        color: white;
+                        font-weight: 100;
+                    }
+                }
+                h5{
+                    font-weight: 600;
+                    color: $brand-main-color;
+                    font-size: 2.7rem;
+                }
+                p:nth-of-type(1){
+                    opacity:1;
+                }
+            }
+            .next {
+                right: 0;
+                top: 50px;
+                width: 60px;
+                height: 60px;
+                z-index: 1;
+                cursor: pointer;
+                &:before,
+                &:after {
+                    height: 22px;
+                    top: 0;
+                    left: 30px;
+                }
+                &:after {
+                    top: 15px;
+                }
+            }
+            ul {
+                &:nth-of-type(1) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 3rem;
+                    li {
+                        color: $brand-main-color;
+                        font-size: 2.3rem;
+                        font-weight: 600;
+                    }
+                }
+                &:nth-of-type(2){
+                    font-weight: 600;
+                }
+            }
+            p {
+                &:nth-of-type(1) {
+                    opacity: 0.8;
+                    font-size: 2.3rem;
+                    margin-bottom: 10px;
+                }
+            }
+            h3 {
+                font-weight: 600;
+                align-self: center;
+            }
+            svg {
+                min-height: 120px;
+                display: flex;
+            }
+            &.visible {
+                z-index: 1;
+                opacity: 1;
+                height: auto;
+                transition: 350ms 100ms ease opacity, 0ms 500ms ease height, 0ms 0ms ease z-index;
+            }
+        }
+        .methodList {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 1;
+            &.visible {
+                opacity: 0;
+                z-index: -1;
+            }
+            .method {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                h3 {
+                    color: $brand-main-color;
+                    text-align: center;
+                    font-size: 2.4rem;
+                    padding: 0 5%;
+                }
+                &:before {
+                    display: none;
+                }
             }
         }
     }

@@ -141,11 +141,27 @@ class BrandGrid extends Component {
     });
   }
 
+  wasBrandSelected(brand) {
+    if (brand !== this.state.selectedbrand) {
+      this.setState({
+        modalToggled: !this.state.modalToggled,
+        selectedbrand: selected
+      });
+    }
+  }
+
   toggleModal(selected) {
-    this.setState({
-      modalToggled: !this.state.modalToggled,
-      selectedbrand: selected
-    });
+    if (selected !== this.state.selectedbrand) {
+      this.setState({
+        modalToggled: true,
+        selectedbrand: selected
+      });
+    } else {
+      this.setState({
+        modalToggled: !this.state.modalToggled,
+        selectedbrand: selected
+      });
+    }
   }
 
   decideRow(brand) {
@@ -182,7 +198,9 @@ class BrandGrid extends Component {
         closeModal={this.closeModal.bind(this)}
       />
     );
-    var isModalToggled = this.state.modalToggled ? `visible visible${this.decideRow(this.state.selectedbrand)}` : "";
+    var isModalToggled = this.state.modalToggled
+      ? `visible visible${this.decideRow(this.state.selectedbrand)}`
+      : "";
     return (
       <div className="brandGrid">
         <ul className={"brandList " + isModalToggled}>
