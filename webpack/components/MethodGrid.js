@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import MethodModal from "./methodModal";
-import Icon1 from "svg-react-loader?name=Icon1!./../../assets/img/methodologies/1.svg";
-import Icon2 from "svg-react-loader?name=Icon2!./../../assets/img/methodologies/2.svg";
-import Icon3 from "svg-react-loader?name=Icon3!./../../assets/img/methodologies/3.svg";
-import Icon4 from "svg-react-loader?name=Icon4!./../../assets/img/methodologies/4.svg";
-import Icon5 from "svg-react-loader?name=Icon5!./../../assets/img/methodologies/5.svg";
-import Icon6 from "svg-react-loader?name=Icon6!./../../assets/img/methodologies/6.svg";
-import Icon7 from "svg-react-loader?name=Icon7!./../../assets/img/methodologies/7.svg";
-import Icon8 from "svg-react-loader?name=Icon8!./../../assets/img/methodologies/8.svg";
-import Icon9 from "svg-react-loader?name=Icon9!./../../assets/img/methodologies/9.svg";
-import Icon10 from "svg-react-loader?name=Icon10!./../../assets/img/methodologies/10.svg";
-import Icon11 from "svg-react-loader?name=Icon11!./../../assets/img/methodologies/11.svg";
-import Icon12 from "svg-react-loader?name=Icon12!./../../assets/img/methodologies/12.svg";
-import Icon13 from "svg-react-loader?name=Icon13!./../../assets/img/methodologies/13.svg";
-import Icon14 from "svg-react-loader?name=Icon14!./../../assets/img/methodologies/14.svg";
-import Icon15 from "svg-react-loader?name=Icon15!./../../assets/img/methodologies/15.svg";
+import Icon1 from "./../../assets/img/methodologies/1.svg";
+import Icon2 from "./../../assets/img/methodologies/2.svg";
+import Icon3 from "./../../assets/img/methodologies/3.svg";
+import Icon4 from "./../../assets/img/methodologies/4.svg";
+import Icon5 from "./../../assets/img/methodologies/5.svg";
+import Icon6 from "./../../assets/img/methodologies/6.svg";
+import Icon7 from "./../../assets/img/methodologies/7.svg";
+import Icon8 from "./../../assets/img/methodologies/8.svg";
+import Icon9 from "./../../assets/img/methodologies/9.svg";
+import Icon10 from "./../../assets/img/methodologies/10.svg";
+import Icon11 from "./../../assets/img/methodologies/11.svg";
+import Icon12 from "./../../assets/img/methodologies/12.svg";
+import Icon13 from "./../../assets/img/methodologies/13.svg";
+import Icon14 from "./../../assets/img/methodologies/14.svg";
+import Icon15 from "./../../assets/img/methodologies/15.svg";
 
 const methodData = {
   methods: [

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Graphic1 from "svg-react-loader?name=Graphic1!../../../assets/img/layout/graphic1.svg";
+import Graphic1 from "./../../../assets/img/layout/graphic1.svg";
 
 class RecruitmentSection extends Component {
   render() {

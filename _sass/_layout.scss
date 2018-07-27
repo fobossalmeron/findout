@@ -239,10 +239,15 @@ section {
                     top: 10px;
                 }
                 &.visible {
-                    height: 100px;
                     opacity: 1;
                     transition: 450ms 150ms ease opacity;
                     z-index: 1;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
                 }
                 &.visible1 {
                     grid-row: 2;

@@ -1,7 +1,7 @@
 {
   "name": "findout",
   "version": "1.0.0",
-  "description": "website for findout.com",
+  "description": "website for findoutresearch.com",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
@@ -14,31 +14,26 @@
   "author": "Rodrigo Salmeron",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-addons-update": "^15.5.2",
     "react-dom": "^16.4.1",
     "react-form": "^3.3.0",
     "react-modal": "^3.5.1",
     "react-scroll-to-component": "^1.0.2",
-    "react-slick": "^0.20.0",
-    "slick": "^1.12.2",
-    "svg-react-loader": "^0.4.5",
-    "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.7.1",
+    "react-svg-loader": "^2.1.0",
+    "webpack": "^4.16.2",
+    "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "react-helmet": "^5.2.0",
-    "react-number-format": "^2.0.4",
+    "@webassemblyjs/ast": "^1.7.4",
     "react-player": "^0.20.0",
-    "react-tabs": "^1.0.0",
-    "react-transition-group": "^1.1.3",
-    "screenfull": "^3.3.2"
+    "webpack-cli": "^3.1.0"
   }
 }

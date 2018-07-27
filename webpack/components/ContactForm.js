@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Text, Select, TextArea, NestedForm, FormError } from 'react-form';
+import { Form, Text, TextArea } from 'react-form';
 
 class ContactForm extends Component {
   constructor(props) {

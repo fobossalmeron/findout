@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import BrandModal from "./brandModal";
-import CocaColaIcon from "svg-react-loader?name=CocaColaIcon!./../../assets/img/clients/clientCocaCola.svg";
-import NikeIcon from "svg-react-loader?name=NikeIcon!./../../assets/img/clients/clientNike.svg";
-import KraftIcon from "svg-react-loader?name=KraftIcon!./../../assets/img/clients/clientKraft.svg";
-import ChanelIcon from "svg-react-loader?name=ChanelIcon!./../../assets/img/clients/clientChanel.svg";
-import HPIcon from "svg-react-loader?name=HPIcon!./../../assets/img/clients/clientHP.svg";
-import FritoLayIcon from "svg-react-loader?name=FritoLayIcon!./../../assets/img/clients/clientFritoLay.svg";
-import UnileverIcon from "svg-react-loader?name=UnileverIcon!./../../assets/img/clients/clientUnilever.svg";
-import PepsicoIcon from "svg-react-loader?name=PepsicoIcon!./../../assets/img/clients/clientPepsico.svg";
-import KelloggsIcon from "svg-react-loader?name=KelloggsIcon!./../../assets/img/clients/clientKelloggs.svg";
-import MaryKayIcon from "svg-react-loader?name=MaryKayIcon!./../../assets/img/clients/clientMaryKay.svg";
-import LundbeckIcon from "svg-react-loader?name=LundbeckIcon!./../../assets/img/clients/clientLudbeck.svg";
-import DiageoIcon from "svg-react-loader?name=DiageoIcon!./../../assets/img/clients/clientDiageo.svg";
+import CocaColaIcon from "./../../assets/img/clients/clientCocaCola.svg";
+import NikeIcon from "./../../assets/img/clients/clientNike.svg";
+import KraftIcon from "./../../assets/img/clients/clientKraft.svg";
+import ChanelIcon from "./../../assets/img/clients/clientChanel.svg";
+import HPIcon from "./../../assets/img/clients/clientHP.svg";
+import FritoLayIcon from "./../../assets/img/clients/clientFritoLay.svg";
+import UnileverIcon from "./../../assets/img/clients/clientUnilever.svg";
+import PepsicoIcon from "./../../assets/img/clients/clientPepsico.svg";
+import KelloggsIcon from "./../../assets/img/clients/clientKelloggs.svg";
+import MaryKayIcon from "./../../assets/img/clients/clientMaryKay.svg";
+import LundbeckIcon from "./../../assets/img/clients/clientLudbeck.svg";
+import DiageoIcon from "./../../assets/img/clients/clientDiageo.svg";
 
 const brandsData = {
   brands: [

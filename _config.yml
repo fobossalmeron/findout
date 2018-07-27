@@ -1,15 +1,16 @@
 ---
-title: 'find:out'
+title: 'Find Out – finding insights where others can’t'
 timezone: UTC
 email: success@designsuccess.com
-description: Find out
+description: 'Find Out is a boutique research agency for the world’s greatest companies, using revolutionary methodologies and finding insights where others can’t'
+keywords: 'Find Out, find:out, research, insights, qualitative, quantitative, QualQuant, research methodologies'
 og_image: "/assets/img/og_image.jpg"
 baseurl: 
-url: http://findout.com
+url: http://findoutresearch.com
 markdown: kramdown
 plugins:
 - jekyll-feed
-- octopress-autoprefixer
+- jekyll-autoprefixer
 exclude:
 - Gemfile
 - Gemfile.lock

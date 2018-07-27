@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import BrandGrid from "./../BrandGrid";
-import Graphic1 from "svg-react-loader?name=Graphic1!../../../assets/img/layout/graphic1.svg";
-import Graphic2 from "svg-react-loader?name=Graphic2!../../../assets/img/layout/graphic2.svg";
-import Graphic3 from "svg-react-loader?name=Graphic3!../../../assets/img/layout/graphic3.svg";
+import Graphic1 from "./../../../assets/img/layout/graphic1.svg";
+import Graphic2 from "./../../../assets/img/layout/graphic2.svg";
+import Graphic3 from "./../../../assets/img/layout/graphic3.svg";
 
 class WhoSection extends Component {
   render() {

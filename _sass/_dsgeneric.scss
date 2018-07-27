@@ -110,7 +110,7 @@ header {
         display: flex;
         justify-content: center;
         opacity: 0.7;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         transition: .3s ease all;
         &:nth-child(1),
         &:nth-child(2) {
@@ -550,5 +550,45 @@ svg {
     to {
         transform: scale(1.02);
         stroke-width: 6;
+    }
+}
+
+.noBackground {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+        animation: tick-tock 800ms steps(8, end) infinite;
+        transform-origin: 50% 50%;
+        & * {
+            fill: $brand-main-color !important;
+        }
+    }
+}
+
+@keyframes tick-tock {
+    to {
+        transform: rotate(360deg);
     }
 }

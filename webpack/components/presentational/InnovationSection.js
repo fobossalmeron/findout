@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import Modal from "react-modal";
-import Graphic3 from "svg-react-loader?name=Graphic3!../../../assets/img/layout/graphic3.svg";
-import PlayButton from "svg-react-loader?name=PlayButton!../../../assets/img/layout/playButton.svg";
+import Graphic3 from "./../../../assets/img/layout/graphic3.svg";
 
 Modal.setAppElement("#app");
 class InnovationSection extends Component {

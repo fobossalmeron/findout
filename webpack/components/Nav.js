@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import HamburgerIcon from "svg-react-loader?name=HamburgerIcon!../../assets/img/layout/hamburger.svg";
-import DesignSuccess from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/designSuccess.svg";
-import DesignSuccessMobile from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/designSuccessMobile.svg";
-import FindOut from "svg-react-loader?name=FindOut!../../assets/img/layout/findOut.svg";
+import HamburgerIcon from "./../../assets/img/layout/hamburger.svg";
+import FindOut from "./../../assets/img/layout/findOut.svg";
 
 class Nav extends Component {
   constructor(props) {
@@ -10,7 +8,7 @@ class Nav extends Component {
     this.state = {
       relative: false,
       menuToggled: false
-    };
+    }; 
     this.navScrollMagic = this.navScrollMagic.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.doHideNav = this.doHideNav.bind(this);

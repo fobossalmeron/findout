@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FindOutIcon from "svg-react-loader?name=FindOutIcon!../../../assets/img/layout/findOut.svg";
+import FindOutIcon from "./../../../assets/img/layout/findOut.svg";
 
 class WhySection extends Component {
   render() {

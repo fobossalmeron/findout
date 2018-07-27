@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HeroDesktop from "svg-react-loader?name=HeroDesktop!../../../assets/img/layout/heroDesktop.svg";
+import HeroDesktop from "./../../../assets/img/layout/heroDesktop.svg";
 
 class HomeSection extends Component {
 
