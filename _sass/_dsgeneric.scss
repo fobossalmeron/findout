@@ -69,20 +69,20 @@ header {
         max-width: 35px;
         cursor: pointer;
         transition: .3s ease all;
-        #top,
-        #mid,
-        #bot {
+        path{
             transition: .3s ease all;
         }
         &.active {
-            #top {
-                transform: translateX(35px)rotate(45deg);
-            }
-            #mid {
-                opacity: 0;
-            }
-            #bot {
-                transform: translateX(-141px) translateY(49px)rotate(-45deg);
+            path{
+                &:nth-child(1) {
+                    transform: translateX(35px)rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateX(-141px) translateY(49px)rotate(-45deg);
+                }
             }
         }
     }
