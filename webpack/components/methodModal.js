@@ -5,10 +5,6 @@ class MethodModal extends Component {
     super(props);
   }
 
-  componentWillMount() {
-    console.log(this.props.method);
-  }
-
   returnList(list) {
     for (var i = 0; i < list.length; i++) {
       <li />;
