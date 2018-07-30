@@ -18,12 +18,16 @@ class ContactSection extends Component {
         <h2>
           <ChallengesWelcome />
         </h2>
-        <a id="downloadPager" href="assets/pdf/one-pager.pdf" download>download PDF<br/>find:out one pager</a>
+        <a id="downloadPager" href="assets/pdf/one-pager.pdf" download>
+          download PDF<br />find:out one pager
+        </a>
         <div className="locationContact">
           <ul className="chooseList">
             <li>las vegas</li>
             <li>mexico city</li>
-            <li>copenhaguen</li>
+            <li>chicago</li>
+            <li>toronto</li>
+            <li>copenhagen</li>
             <li>singapore</li>
           </ul>
         </div>
@@ -48,7 +52,7 @@ class ContactSection extends Component {
           </div>
           <p>
             © design success international ds worldwide consulting llc. all
-            rights reserved. <a>privacy of use</a> | <a>terms & conditions</a>
+            rights reserved. <a href="https://designsuccess.com/privacy">privacy of use</a> | <a href="https://designsuccess.com/terms">terms & conditions</a>
           </p>
         </footer>
       </section>

@@ -11,6 +11,9 @@
         font-weight: 600;
         color: #15A8DF;
         font-family: $secondary-font-family;
+        svg{
+            max-width: 100%;
+        }
     }
     .mainLogo {
         * {
@@ -33,8 +36,19 @@
 
 header {
     background-color: transparent;
+    .designSuccessLogo {
+        transition: .3s ease all;
+    }
+    .headerWrapper {
+        padding: 15px 0 8px 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
     &.headerScroll {
         background-color: black;
+        .designSuccessLogo {
+            opacity: 1;
+        }
     }
 }
 
@@ -199,6 +213,7 @@ section {
 }
 
 #who {
+    max-width: 1150px;
     .brandGrid {
         margin-top: 8%;
         .brandList {
@@ -388,8 +403,11 @@ section {
         }
     }
 }
-
+#recruitment{
+    max-width: 1150px;
+}
 #methodologies {
+    max-width: 1150px;
     .methodGrid {
         position: relative;
         .methodModal {
@@ -403,22 +421,22 @@ section {
             justify-items: center;
             padding: 0 4%;
             height: 730px;
-            .special{
-                ul:nth-of-type(1){
+            .special {
+                ul:nth-of-type(1) {
                     display: flex;
-                    flex-direction: column;              
-                    li{
+                    flex-direction: column;
+                    li {
                         color: white;
                         font-weight: 100;
                     }
                 }
-                h5{
+                h5 {
                     font-weight: 600;
                     color: $brand-main-color;
                     font-size: 2.7rem;
                 }
-                p:nth-of-type(1){
-                    opacity:1;
+                p:nth-of-type(1) {
+                    opacity: 1;
                 }
             }
             .next {
@@ -449,7 +467,7 @@ section {
                         font-weight: 600;
                     }
                 }
-                &:nth-of-type(2){
+                &:nth-of-type(2) {
                     font-weight: 600;
                 }
             }
@@ -493,11 +511,20 @@ section {
                 display: flex;
                 flex-direction: column;
                 cursor: pointer;
+                opacity: .8;
+                transition: opacity 0.3s ease;
+                &:hover {
+                    opacity: 1;
+                    h3 {
+                        text-decoration: underline;
+                    }
+                }
                 h3 {
                     color: $brand-main-color;
                     text-align: center;
                     font-size: 2.4rem;
                     padding: 0 5%;
+                    transition: text-decoration 0.3s ease;
                 }
                 &:before {
                     display: none;
@@ -523,6 +550,7 @@ section {
 }
 
 #innovation {
+    max-width: 1150px;
     ul li:nth-of-type(1) {
         &:before {
             display: none;
@@ -531,6 +559,7 @@ section {
 }
 
 #why {
+    max-width: 1150px;
     h2 {
         color: white;
         display: flex;
@@ -577,7 +606,6 @@ section {
 }
 
 .screen {
-    min-height: 90vh;
     display: grid;
     align-content: center;
     position: relative;
@@ -631,4 +659,34 @@ section {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: .3s ease all;
+}
+
+#contact {
+    #downloadPager {
+        position: absolute;
+        background-color: $brand-main-color;
+        border: none;
+        padding: 1%;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: white;
+        font-family: inherit;
+        border-radius: 2px;
+        grid-row: 3 / span 1;
+        justify-self: flex-end;
+        align-self: flex-end;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 600;
+        margin-right: 6%;
+    }
+    svg {
+        max-width: 100%;
+    }
+    .engageLogo {
+        max-width: 260px;
+        & * {
+            fill: $brand-main-color;
+        }
+    }
 }
