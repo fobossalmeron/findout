@@ -9,9 +9,9 @@ class WhoSection extends Component {
   render() {
     return (
       <section id="who">
-        <div className="screen1 screen">
+        {/*<div className="screen1 screen">
           <ReactPlayer url="https://vimeo.com/277727787" className="fullVideo"/>
-        </div>
+        </div>*/}
         <p>
           <span>find:out</span> is an innovative boutique research company that finds solutions where
           others can’t!
