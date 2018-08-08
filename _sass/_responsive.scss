@@ -163,8 +163,8 @@
         }
     }
     .headerWrapper {
-        a{
-          justify-content: left;
+        a {
+            justify-content: left;
         }
         .a:nth-child(1) {
             grid-column: 1 / span 1;
@@ -172,9 +172,9 @@
         .websiteLogo {
             margin-top: 0;
         }
-        nav ul li a{
-          font-size:5rem;
-          justify-self: flex-start;
+        nav ul li a {
+            font-size: 5rem;
+            justify-self: flex-start;
         }
     }
     #contact {
@@ -308,10 +308,26 @@
     #home h1 {
         font-size: 3.4rem;
     }
+    #contact .locationContact {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            li {
+                background-color: black;
+            }
+        }
+        &~.locationContact p {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 @include media-query(400px) {
     #home h1 {
         font-size: 3.4rem;
+    }
+    #contact .locationMap {
+        min-width: 470px;
     }
 }
