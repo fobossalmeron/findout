@@ -23,7 +23,7 @@ class ContactSection extends Component {
         </a>
         <div className="locationContact">
           <ul className="chooseList">
-            <li>las vegas</li>
+            <li>seattle</li>
             <li>mexico city</li>
             <li>chicago</li>
             <li>toronto</li>
